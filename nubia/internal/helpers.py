@@ -14,7 +14,7 @@ import string
 import subprocess
 
 from collections import namedtuple
-from typing import _Union, Any, Iterable  # noqa T484
+from typing import Union, Any, Iterable  # noqa T484
 
 
 def add_command_arguments(parser, options):
@@ -177,7 +177,7 @@ def is_union(t: Any) -> bool:
     https://github.com/ilevkivskyi/typing_inspect for the rationale behind the
     implementation.
     """
-    return type(t) is _Union
+    return type(t) is Union
 
 
 def is_optional(t: Any) -> bool:
