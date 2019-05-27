@@ -409,6 +409,10 @@ class AutoCommand(Command):
         for attr, inspection in subcommands:
             if inspection.command.name == name:
                 return attr
+            else:
+                for sc in inscpection.command.aliases:
+                    if sc == name:
+                        return attr
         # be explicit about returning None for readability
         return None
 
